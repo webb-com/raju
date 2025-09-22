@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RideSharing System - Project</title>
+    <!-- Use the Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Include Tailwind CSS from CDN for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+        }
+
+        /* Glassmorphism effect */
+        .glass-effect {
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+
+        /* Custom scroll-to-top button styling */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: none;
+            background-color: #4a90e2;
+            color: white;
+            padding: 0.75rem;
+            border-radius: 9999px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: opacity 0.3s, transform 0.3s;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600">
+                RideShare Hub
+            </div>
+            <nav class="hidden md:flex space-x-6 font-medium">
+                <a href="#about" class="hover:text-blue-600 transition-colors">About</a>
+                <a href="#features" class="hover:text-blue-600 transition-colors">Features</a>
+                <a href="#login" class="hover:text-blue-600 transition-colors">Login / Sign Up</a>
+                <a href="#contact" class="hover:text-blue-600 transition-colors">Contact</a>
+            </nav>
+            <button id="menu-toggle" class="md:hidden p-2 text-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <nav class="flex flex-col p-4 space-y-2 font-medium">
+                <a href="#about" class="p-2 hover:bg-gray-100 rounded-lg">About</a>
+                <a href="#features" class="p-2 hover:bg-gray-100 rounded-lg">Features</a>
+                <a href="#login" class="p-2 hover:bg-gray-100 rounded-lg">Login / Sign Up</a>
+                <a href="#contact" class="p-2 hover:bg-gray-100 rounded-lg">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="container mx-auto px-4 py-16 md:py-24">
+        <section class="text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
+                Your Community Ride, <br class="hidden md:block"> Just a Tap Away.
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+                Connect with drivers and passengers for a sustainable, affordable, and social way to travel.
+            </p>
+            <button class="bg-blue-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 transition-all transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                Get Started
+            </button>
+        </section>
+    </main>
+
+    <!-- Project Details Section -->
+    <section id="about" class="bg-gray-50 py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Project Submission Details</h2>
+                <p class="text-gray-600 text-lg mb-8">This website serves as a portfolio piece for a RideSharing System. Below are the project details.</p>
+                <div class="bg-gray-100 p-8 rounded-2xl shadow-inner inline-block text-left max-w-sm w-full glass-effect">
+                    <ul class="space-y-4 text-gray-700 font-medium">
+                        <li>
+                            <strong class="text-gray-900">Project Name:</strong> RideSharing System
+                        </li>
+                        <li>
+                            <strong class="text-gray-900">Name:</strong> kornana yuvaraj kumar
+                        </li>
+                        <li>
+                            <strong class="text-gray-900">Enrollment No:</strong> 2403031461696
+                        </li>
+                        <li>
+                            <strong class="text-gray-900">Roll No:</strong> 61
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Key Features & Technology</h2>
+                <p class="text-lg text-gray-600">The platform is designed to make ridesharing simple and efficient for everyone.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-xl transition-shadow text-center glass-effect">
+                    <div class="text-blue-600 mb-4 inline-block p-4 bg-blue-100 rounded-full">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Easy Ride Booking</h3>
+                    <p class="text-gray-600">Find and book a ride with just a few taps. Our intuitive interface makes it easy to find what you need.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-xl transition-shadow text-center glass-effect">
+                    <div class="text-blue-600 mb-4 inline-block p-4 bg-blue-100 rounded-full">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-3.14 0-5 2.84-5 5s1.86 5 5 5 5-2.84 5-5-1.86-5-5-5z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Secure Payments</h3>
+                    <p class="text-gray-600">Our integrated payment system ensures a safe and seamless transaction for both drivers and riders.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-xl transition-shadow text-center glass-effect">
+                    <div class="text-blue-600 mb-4 inline-block p-4 bg-blue-100 rounded-full">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Community Driven</h3>
+                    <p class="text-gray-600">Build trust and reputation within a community of users who share a common goal of efficient travel.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-xl transition-shadow text-center glass-effect">
+                    <div class="text-blue-600 mb-4 inline-block p-4 bg-blue-100 rounded-full">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Real-Time Tracking</h3>
+                    <p class="text-gray-600">See your ride's location on the map and get estimated arrival times to stay in the loop.</p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-xl transition-shadow text-center glass-effect">
+                    <div class="text-blue-600 mb-4 inline-block p-4 bg-blue-100 rounded-full">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.54 1.118l-3.974-2.888a1 1 0 00-1.176 0l-3.974 2.888c-.785.57-1.84-.196-1.54-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.381-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Driver & Rider Ratings</h3>
+                    <p class="text-gray-600">Build trust and accountability with a transparent rating and review system for all users.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login/Sign-up Section -->
+    <section id="login" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-md mx-auto p-8 glass-effect text-center">
+                <h2 id="formTitle" class="text-2xl font-bold mb-6 text-gray-900">User Login</h2>
+
+                <!-- Login Form -->
+                <form id="loginForm" class="space-y-4">
+                    <div>
+                        <label for="loginUsername" class="block text-sm font-medium text-gray-700 text-left">Username</label>
+                        <input type="text" id="loginUsername" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" required>
+                    </div>
+                    <div>
+                        <label for="loginPassword" class="block text-sm font-medium text-gray-700 text-left">Password</label>
+                        <input type="password" id="loginPassword" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" required>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded-md shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        Log In
+                    </button>
+                    <p class="mt-4 text-sm text-gray-600">Don't have an account? <a href="#" id="showSignup" class="text-blue-600 font-semibold hover:underline">Sign Up</a></p>
+                </form>
+
+                <!-- Sign-up Form -->
+                <form id="signupForm" class="space-y-4 hidden">
+                    <div>
+                        <label for="signupUsername" class="block text-sm font-medium text-gray-700 text-left">Create Username</label>
+                        <input type="text" id="signupUsername" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" required>
+                    </div>
+                    <div>
+                        <label for="signupPassword" class="block text-sm font-medium text-gray-700 text-left">Create Password</label>
+                        <input type="password" id="signupPassword" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" required>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded-md shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        Sign Up
+                    </button>
+                    <p class="mt-4 text-sm text-gray-600">Already have an account? <a href="#" id="showLogin" class="text-blue-600 font-semibold hover:underline">Log In</a></p>
+                </form>
+                
+                <div id="messageBox" class="mt-6 p-4 rounded-lg text-center font-medium hidden"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="contact" class="bg-blue-600 py-16 md:py-24 text-center">
+        <div class="container mx-auto px-4 text-white">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Join the Ride?</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">
+                Sign up today and start your journey towards a more connected and sustainable way to travel.
+            </p>
+            <div class="space-y-4 md:space-y-0 md:flex md:justify-center md:items-center md:space-x-8">
+                 <a href="tel:+919849358219" class="bg-transparent border-2 border-white text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-white hover:text-blue-600 transition-all transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2">
+                    Contact: +91 98493 58219
+                </a>
+                <a href="#login" class="bg-white text-blue-600 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition-all transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2">
+                    Create Account
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 RideShare Hub. All rights reserved.</p>
+            <p class="text-sm mt-2">
+                Designed for project submission by kornana yuvaraj kumar.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scroll-to-top button -->
+    <button id="scrollTopBtn" class="scroll-top">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            const mainContent = document.querySelector('main');
+            const loginForm = document.getElementById('loginForm');
+            const signupForm = document.getElementById('signupForm');
+            const showLoginBtn = document.getElementById('showLogin');
+            const showSignupBtn = document.getElementById('showSignup');
+            const formTitle = document.getElementById('formTitle');
+            const messageBox = document.getElementById('messageBox');
+            
+            // Function to show message box
+            const showMessage = (message, isSuccess) => {
+                messageBox.textContent = message;
+                messageBox.classList.remove('hidden', 'bg-green-100', 'bg-red-100', 'text-green-600', 'text-red-600');
+                if (isSuccess) {
+                    messageBox.classList.add('bg-green-100', 'text-green-600');
+                } else {
+                    messageBox.classList.add('bg-red-100', 'text-red-600');
+                }
+                messageBox.classList.remove('hidden');
+            };
+
+            // Function to switch between login and sign-up forms
+            const switchToForm = (formToShow) => {
+                if (formToShow === 'login') {
+                    loginForm.classList.remove('hidden');
+                    signupForm.classList.add('hidden');
+                    formTitle.textContent = 'User Login';
+                } else {
+                    loginForm.classList.add('hidden');
+                    signupForm.classList.remove('hidden');
+                    formTitle.textContent = 'Create Account';
+                }
+                messageBox.classList.add('hidden');
+            };
+
+            // Event listeners for form switching
+            showSignupBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                switchToForm('signup');
+            });
+
+            showLoginBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                switchToForm('login');
+            });
+
+            // Handle login form submission
+            loginForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const username = document.getElementById('loginUsername').value;
+                const password = document.getElementById('loginPassword').value;
+                
+                // For a real app, this would be a secure server-side check.
+                if (username && password) {
+                    showMessage('Login successful!', true);
+                } else {
+                    showMessage('Invalid ID or password.', false);
+                }
+            });
+
+            // Handle sign-up form submission
+            signupForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const newUsername = document.getElementById('signupUsername').value;
+                const newPassword = document.getElementById('signupPassword').value;
+
+                // For a real app, this would be a secure server-side operation.
+                if (newUsername && newPassword) {
+                    showMessage('Account created successfully!', true);
+                    setTimeout(() => switchToForm('login'), 2000); // Redirect to login after 2 seconds
+                } else {
+                    showMessage('Please fill in all fields to create an account.', false);
+                }
+            });
+
+            // Toggle mobile menu visibility
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Show/hide scroll-to-top button based on scroll position
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > mainContent.offsetTop) {
+                    scrollTopBtn.style.display = 'block';
+                } else {
+                    scrollTopBtn.style.display = 'none';
+                }
+            });
+
+            // Smooth scroll to top when button is clicked
+            scrollTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
